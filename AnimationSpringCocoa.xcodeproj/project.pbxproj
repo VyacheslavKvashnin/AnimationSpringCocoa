@@ -56,15 +56,47 @@
 		BD05864427F8572200238208 /* AnimationSpringCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				BD05864527F8572200238208 /* AppDelegate.swift */,
-				BD05864727F8572200238208 /* SceneDelegate.swift */,
-				BD05864927F8572200238208 /* ViewController.swift */,
-				BD05864B27F8572200238208 /* Main.storyboard */,
-				BD05864E27F8572300238208 /* Assets.xcassets */,
-				BD05865027F8572300238208 /* LaunchScreen.storyboard */,
-				BD05865327F8572300238208 /* Info.plist */,
+				BD05865A27F8579700238208 /* ViewControllers */,
+				BD05865C27F857B400238208 /* Storyboards */,
+				BD05865B27F857A900238208 /* App */,
+				BD05865D27F857C100238208 /* Resurces */,
 			);
 			path = AnimationSpringCocoa;
+			sourceTree = "<group>";
+		};
+		BD05865A27F8579700238208 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD05864927F8572200238208 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD05865B27F857A900238208 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BD05864527F8572200238208 /* AppDelegate.swift */,
+				BD05864727F8572200238208 /* SceneDelegate.swift */,
+				BD05865327F8572300238208 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BD05865C27F857B400238208 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BD05864B27F8572200238208 /* Main.storyboard */,
+				BD05865027F8572300238208 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BD05865D27F857C100238208 /* Resurces */ = {
+			isa = PBXGroup;
+			children = (
+				BD05864E27F8572300238208 /* Assets.xcassets */,
+			);
+			path = Resurces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +323,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P745L5C6BY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AnimationSpringCocoa/Info.plist;
+				INFOPLIST_FILE = AnimationSpringCocoa/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +351,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P745L5C6BY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AnimationSpringCocoa/Info.plist;
+				INFOPLIST_FILE = AnimationSpringCocoa/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
