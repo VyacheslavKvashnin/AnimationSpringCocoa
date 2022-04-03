@@ -5,13 +5,12 @@
 //  Created by Вячеслав Квашнин on 02.04.2022.
 //
 
-import UIKit
 import Spring
 
 class AnimationViewController: UIViewController {
     
     @IBOutlet weak var springAnimationView: SpringView!
-
+    
     @IBOutlet weak var curveLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var animationLabel: UILabel!
@@ -23,15 +22,10 @@ class AnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        animationLabel.text = springAnimationView.animation
-        curveLabel.text = springAnimationView.curve
-        
+        getProperties()
     }
     
     @IBAction func springAnimationButton(_ sender: UIButton) {
-        
-        animationLabel.text = springAnimationView.animation
-        curveLabel.text = springAnimationView.curve
         
         springAnimationView.animation = animationEffect.animation
         springAnimationView.curve = animationEffect.curve
@@ -40,8 +34,18 @@ class AnimationViewController: UIViewController {
         springAnimationView.delay = CGFloat(animationEffect.delay)
         springAnimationView.animate()
         
+        getProperties()
+        
         animationEffect = AnimationEffect.getAnimation()
         
-        sender.setTitle(springAnimationView.animation, for: .normal)
+        sender.setTitle(animationEffect.animation, for: .normal)
+    }
+    
+    private func getProperties() {
+        animationLabel.text = "animation: \(springAnimationView.animation)"
+        curveLabel.text = "curve: \(springAnimationView.curve)"
+        forceLabel.text = "format: \(String(format: "%.2f", animationEffect.force))"
+        delayLabel.text = "delay: \(String(format: "%.2f", animationEffect.delay))"
+        durationLabel.text = "duration: \(String(format: "%.2f", animationEffect.duration))"
     }
 }
