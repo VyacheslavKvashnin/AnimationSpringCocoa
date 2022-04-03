@@ -10,10 +10,12 @@
 		0A527DABF5EEECEBB31343C7 /* Pods_AnimationSpringCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F985EA18DCC6CC8810B74ED /* Pods_AnimationSpringCocoa.framework */; };
 		BD05864627F8572200238208 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05864527F8572200238208 /* AppDelegate.swift */; };
 		BD05864827F8572200238208 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05864727F8572200238208 /* SceneDelegate.swift */; };
-		BD05864A27F8572200238208 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05864927F8572200238208 /* ViewController.swift */; };
+		BD05864A27F8572200238208 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05864927F8572200238208 /* AnimationViewController.swift */; };
 		BD05864D27F8572200238208 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD05864B27F8572200238208 /* Main.storyboard */; };
 		BD05864F27F8572300238208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD05864E27F8572300238208 /* Assets.xcassets */; };
 		BD05865227F8572300238208 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD05865027F8572300238208 /* LaunchScreen.storyboard */; };
+		BD05866027F86B4000238208 /* AnimationEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05865F27F86B4000238208 /* AnimationEffect.swift */; };
+		BD05866927F8D93A00238208 /* SpringAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05866827F8D93A00238208 /* SpringAnimationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +25,13 @@
 		BD05864227F8572200238208 /* AnimationSpringCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationSpringCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD05864527F8572200238208 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD05864727F8572200238208 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD05864927F8572200238208 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD05864927F8572200238208 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		BD05864C27F8572200238208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD05864E27F8572300238208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD05865127F8572300238208 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD05865327F8572300238208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD05865F27F86B4000238208 /* AnimationEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEffect.swift; sourceTree = "<group>"; };
+		BD05866827F8D93A00238208 /* SpringAnimationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,6 @@
 				7A6FDDA3837FB8FDF4A32199 /* Pods-AnimationSpringCocoa.debug.xcconfig */,
 				AC7DB39E508BABF3AD498339 /* Pods-AnimationSpringCocoa.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				BD05865A27F8579700238208 /* ViewControllers */,
+				BD05865E27F86B2300238208 /* Models */,
+				BD05866727F8D8AB00238208 /* Services */,
 				BD05865C27F857B400238208 /* Storyboards */,
 				BD05865B27F857A900238208 /* App */,
 				BD05865D27F857C100238208 /* Resurces */,
@@ -92,7 +97,7 @@
 		BD05865A27F8579700238208 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BD05864927F8572200238208 /* ViewController.swift */,
+				BD05864927F8572200238208 /* AnimationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -122,6 +127,22 @@
 				BD05864E27F8572300238208 /* Assets.xcassets */,
 			);
 			path = Resurces;
+			sourceTree = "<group>";
+		};
+		BD05865E27F86B2300238208 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD05865F27F86B4000238208 /* AnimationEffect.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD05866727F8D8AB00238208 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BD05866827F8D93A00238208 /* SpringAnimationManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD05864A27F8572200238208 /* ViewController.swift in Sources */,
+				BD05864A27F8572200238208 /* AnimationViewController.swift in Sources */,
+				BD05866027F86B4000238208 /* AnimationEffect.swift in Sources */,
 				BD05864627F8572200238208 /* AppDelegate.swift in Sources */,
+				BD05866927F8D93A00238208 /* SpringAnimationManager.swift in Sources */,
 				BD05864827F8572200238208 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
