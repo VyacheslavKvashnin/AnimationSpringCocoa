@@ -15,6 +15,16 @@ struct AnimationEffect {
     let duration: Float
     let delay: Float
     
+    var description: String {
+        """
+    animation: \(animation)
+    curve: \(curve)
+    force: \(String(format: "%.2f", force))
+    duration: \(String(format: "%.2f", duration))
+    delay: \(String(format: "%.2f", delay))
+"""
+    }
+    
     static func getAnimation() -> AnimationEffect {
         
         AnimationEffect(

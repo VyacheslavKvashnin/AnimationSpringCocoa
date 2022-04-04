@@ -10,19 +10,14 @@ import Spring
 class AnimationViewController: UIViewController {
     
     @IBOutlet weak var springAnimationView: SpringView!
-    
-    @IBOutlet weak var curveLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var animationLabel: UILabel!
-    @IBOutlet weak var forceLabel: UILabel!
-    @IBOutlet weak var delayLabel: UILabel!
     
     private var animationEffect = AnimationEffect.getAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        animationLabel.text = animationEffect.description
         
-        getProperties()
     }
     
     @IBAction func springAnimationButton(_ sender: UIButton) {
@@ -34,18 +29,10 @@ class AnimationViewController: UIViewController {
         springAnimationView.delay = CGFloat(animationEffect.delay)
         springAnimationView.animate()
         
-        getProperties()
+        animationLabel.text = animationEffect.description
         
         animationEffect = AnimationEffect.getAnimation()
         
         sender.setTitle(animationEffect.animation, for: .normal)
-    }
-    
-    private func getProperties() {
-        animationLabel.text = "animation: \(springAnimationView.animation)"
-        curveLabel.text = "curve: \(springAnimationView.curve)"
-        forceLabel.text = "format: \(String(format: "%.2f", animationEffect.force))"
-        delayLabel.text = "delay: \(String(format: "%.2f", animationEffect.delay))"
-        durationLabel.text = "duration: \(String(format: "%.2f", animationEffect.duration))"
     }
 }
