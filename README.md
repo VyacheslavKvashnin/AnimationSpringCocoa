@@ -5,8 +5,7 @@
 > + Должна отображаться информация о текущей анимации: название и параметры анимации.
 > + Запуск анимации должен происходить по нажатию на кнопку. При этом на самой кнопке должно отображаться название следующей анимации.
 
-<img src = "https://user-images.githubusercontent.com/101284761/167237991-635342ed-35d2-4bda-906d-f23ca1408055.png" width = "300">
-<img src = "https://user-images.githubusercontent.com/101284761/167237995-0f6b1d19-91d9-4964-a907-7d3fde37f522.png" width = "300">
+<img src = "https://user-images.githubusercontent.com/101284761/167237991-635342ed-35d2-4bda-906d-f23ca1408055.png" width = "300"> <img src = "https://user-images.githubusercontent.com/101284761/167237995-0f6b1d19-91d9-4964-a907-7d3fde37f522.png" width = "300">
 
 
 ==============================================================
